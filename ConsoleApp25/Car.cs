@@ -21,8 +21,35 @@ namespace ConsoleApp25
             Model = model;
             StatusEngine = false;
             Rpm = 0;
+        }
 
+        public void Start()
+        {
+            StatusEngine = true;
+            Rpm = 800;
+        }
 
+        public void PowerOff()
+        {
+            StatusEngine = false;
+            Rpm = 0;
+        }
+
+        public string GetInfoCar()
+        {
+            string info = $"Машина: {Model}. Статус двигателя: {StatusEngine}. Обороты: {Rpm}";
+            return info;
+        }
+
+        public void IncreaseRpm(int rpm)
+        {
+            int temp = Rpm + rpm;
+            if (temp >= MaxRpm)
+            {
+                return;
+            }
+
+            Rpm = Rpm + rpm;
         }
 
     }
