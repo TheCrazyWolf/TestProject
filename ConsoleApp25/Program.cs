@@ -6,6 +6,10 @@ namespace ConsoleApp25
     {
         static void Main(string[] args)
         {
+            Car audi = new Car("Audi A7");
+
+            
+
             Console.WriteLine("Hello World!");
         }
     }
